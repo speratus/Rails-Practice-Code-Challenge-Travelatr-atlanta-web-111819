@@ -1,0 +1,21 @@
+<h1><%= @destination.name %></h1>
+<h2>
+    Featured Post:
+    <%= link_to @featured_post.title, post_path(@featured_post) %>
+</h2>
+
+<h4>
+    Average Blogger age: 
+    <%= @average_age %>
+</h4>
+
+<hr>
+
+<h3>Most Recent Posts</h3>
+<ul>
+    <% @most_recent.each do |post| %>
+        <li>
+            <%= link_to post.title, post_path(post) %>
+        </li>
+    <% end %>
+</ul>
